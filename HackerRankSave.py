@@ -21,11 +21,8 @@ def make_folder(lang):
     if not os.path.exists(lang):
         os.makedirs(lang)
 
-def writer(path, solution):
+def writer(path, code):
     with open(path, 'w') as code_file:
-        code = solution['code']
-        score = solution['score']
-        if code and score > 0:
             code_file.write(code)
 
 def main():
@@ -45,8 +42,11 @@ def main():
                 filename = "".join(letter for letter in solution['challenge'] if letter.isalnum())
                 path = make_path(filename, language)
 
-                if not os.path.isfile(path):
-                    writer(path, solution)
+                code = solution['code']
+                score = solution['score']
+                # check if file doesn't exist, code is not blank and problem solved
+                if not os.path.isfile(path) and code and score > 0:
+                    writer(path, code)
                     print(f"{filename} was saved")
                     total += 1
             print(f"\n{total} problems were saved")
