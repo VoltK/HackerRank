@@ -8,6 +8,9 @@ import sys
 
 # Complete the caesarCipher function below.
 def caesarCipher(s, k):
+    if k > 26:
+        k = k % 26
+
     enc = ""
     for c in s:
         if c.isalpha():

@@ -45,7 +45,7 @@ def main():
                 code = solution['code']
                 score = solution['score']
                 # check if file doesn't exist, code is not blank and problem solved
-                if not os.path.isfile(path) and code and score > 0:
+                if not os.path.isfile(path) and code and score == 1:
                     writer(path, code)
                     print(f"{filename} was saved")
                     total += 1

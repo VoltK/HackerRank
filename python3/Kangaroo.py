@@ -11,7 +11,12 @@ def kangaroo(x1, v1, x2, v2):
     if v2 > v1 and x2 > x1 or v1 > v2 and x1 > x2:
         return 'NO'
     else:
-        return 'YES'
+        for _ in range(10001):
+            x1 += v1
+            x2 += v2
+            if x1 == x2:
+                return 'YES'
+        return 'NO'
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')

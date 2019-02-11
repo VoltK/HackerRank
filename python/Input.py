@@ -4,3 +4,4 @@ poly = raw_input().replace('x', nums[0])
 
 if eval(poly) == int(nums[1]):
     print True
+else: print False

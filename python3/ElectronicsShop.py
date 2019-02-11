@@ -10,10 +10,8 @@ def getMoneySpent(keyboards, drives, b):
     options = -1
     for key in keyboards:
         for drive in drives:
-            if drive + key <= b and drive + key > options:
+            if drive + key <= b and drive + key >= options:
                 options = drive + key
-            else:
-                options = -1
     return options
 
 

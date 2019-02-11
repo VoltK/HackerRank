@@ -13,12 +13,12 @@ def gradingStudents(grades):
         if grade < 38:
             updated.append(grade)
         else:
-            mult_5 = (x for x in range(grade, 101) if x % 5 == 0)
+            mult_5 = (x for x in range(grade, grade + 5) if x % 5 == 0)
             for mult in mult_5:
                 if mult - grade < 3:
                     rounded = grade + (mult - grade)
                     updated.append(rounded)
-                elif mult - grade == 3:
+                elif mult - grade == 3 or mult -grade == 4:
                     updated.append(grade)
 
          

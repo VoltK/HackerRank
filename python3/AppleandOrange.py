@@ -15,11 +15,11 @@ def countApplesAndOranges(s, t, a, b, apples, oranges):
     total = {'apples': 0, 'oranges': 0}
 
     for apple in fall_apple:
-        if apple in list(range(s, t+1)):
+        if apple in range(s, t+1):
             total['apples'] += 1
     
     for orange in fall_orange:
-        if orange in list(range(s, t+1)):
+        if orange in range(s, t+1):
             total['oranges'] += 1
     
     print(total['apples'])

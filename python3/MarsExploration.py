@@ -9,9 +9,9 @@ import sys
 # Complete the marsExploration function below.
 def marsExploration(s):
     count = 0
-    for x in range(3, len(s), 3):
-        for letter in s[x: x + 3]:
-            if letter not in 'SOS':
+    for x in range(0, len(s), 3):
+        for x, y in zip(s[x:x+3], 'SOS'):
+            if x != y:
                 count += 1
     return count
 

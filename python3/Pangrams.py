@@ -8,7 +8,7 @@ import sys
 
 # Complete the pangrams function below.
 def pangrams(s):
-    return 'pangram' if len(set(s.lower().replace(" ",""))) == 26 else 'not panagrma'
+    return 'pangram' if len(set(s.lower().replace(" ",""))) == 26 else 'not pangram'
 
     
 

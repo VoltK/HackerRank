@@ -18,7 +18,7 @@ def minimumNumber(n, password):
         count += 1
     if not any(x in "!@#$%^&*()-+" for x in password):
         count += 1
-    return 6 - n if n < 6 else count
+    return max(count,6-n)
     
 
 if __name__ == '__main__':

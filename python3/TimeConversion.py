@@ -8,9 +8,15 @@ import sys
 #
 def timeConversion(s):
     if s.endswith('PM'):
-        new = str(int(s[:2]) + 12) + s[2:-2]
+        if s[:2] == '12':
+            new = s[:-2]
+        else:
+            new = str(int(s[:2]) + 12) + s[2:-2]
     else:
-        new = int(s[:2]) + s[2:-2]
+        if s[:2] == '12':
+            new = "00" + s[2:-2]
+        else:
+            new = s[:-2]
     return new
 
 if __name__ == '__main__':
